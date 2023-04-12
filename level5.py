@@ -32,13 +32,13 @@ def level_5_pw_check(pw):
         decryption = str_xor(flag_enc.decode(), user_pw)
         print(decryption)
         return
-    print("That password is incorrect")
+    #print("That password is incorrect")
 
 with open('dictionary.txt') as f:
     lines = f.readlines()
     for l in lines:
         pw = l[:-1]
-        print(pw)
+        level_5_pw_check(pw)
 
 
 
